@@ -15,7 +15,10 @@ export const cryptoNewsAPI = createApi({
     baseQuery: fetchBaseQuery({baseUrl}),
     endpoints: (builder)=>({
         getCryptoNews:builder.query({
-            query : (newsCategory, count)=>createRequest(`/news/search?q=${newsCategory}&safeSearch=Off&textFormat=Raw&freshness=Day&count=${count}`)
+            // query : (newsCategory,count)=>createRequest(`/news/search?q=${newsCategory}&safeSearch=Off&textFormat=Raw&freshness=Day&count=${count}`) 
+            // a simple " , " at the end of the query make you spend whole day finding error fuck 
+            query: ({ newsCategory, count }) => createRequest(`/news/search?q=${newsCategory}&safeSearch=Off&textFormat=Raw&freshness=Day&count=${count}`),
+
             // above `` is copied as it's url
         })
     })

@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from 'react-redux';
 
 import App from "./App";
-import 'antd/dist/antd.css'  //most important thing for ant design 
+import 'antd/dist/antd.min.css'  //most important thing for ant design 
 import store from "./app/store"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
